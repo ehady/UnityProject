@@ -41,12 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1529080207
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Grid
     uniqueID: 2896667073
     locked: 0
-  - name: Background
-    uniqueID: 1529080207
+  - name: Entities
+    uniqueID: 3524521993
     locked: 0
