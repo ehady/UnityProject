@@ -9,11 +9,13 @@ TagManager:
   - ladder
   - fire
   - potiongreen
+  - grabbable
+  - box
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - JumpableGround
   - Water
   - UI
   - 
@@ -43,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4093785783
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
