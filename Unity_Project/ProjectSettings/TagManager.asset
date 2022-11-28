@@ -7,6 +7,7 @@ TagManager:
   - ladder
   - Key
   - fire
+  - grabbable
   layers:
   - Default
   - TransparentFX
@@ -49,7 +50,4 @@ TagManager:
     locked: 0
   - name: Grid
     uniqueID: 2896667073
-    locked: 0
-  - name: Entities
-    uniqueID: 3524521993
     locked: 0
