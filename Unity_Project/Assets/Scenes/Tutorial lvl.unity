@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 107881727}
   - component: {fileID: 107881726}
   - component: {fileID: 107881728}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13450,7 +13450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpableGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
   movespeed: 7
   jumpforce: 14
 --- !u!95 &2137162287
@@ -13486,6 +13486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keytext: {fileID: 1306719219}
+  key: 0
 --- !u!114 &2137162289
 MonoBehaviour:
   m_ObjectHideFlags: 0
