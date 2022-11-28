@@ -18,9 +18,13 @@ public class ItemCollector : MonoBehaviour
             keytext.text = "Keys : " + key;
 
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("potion"))
+        {
+            Destroy(collision.gameObject);
 
-
-
-
+        }
     }
 }

@@ -14,7 +14,8 @@ public class PlayerMouvement : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField] private float movespeed = 7f;
     [SerializeField] private float jumpforce = 14f;
-    
+    private bool doublejump;
+    private bool potioncolision;
 
     void Start()
     {
@@ -23,20 +24,37 @@ public class PlayerMouvement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("potiongreen"))
+        {
+            Destroy(collision.gameObject);
+            potioncolision = true;
 
+        }
+    }
 
     private void Update()
     {
+        if( GroundCheck() && !Input.GetButton("Jump"))
+        {
+            doublejump = false;
+        }
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * movespeed, rb.velocity.y);
-        if (Input.GetButtonDown("Jump") && GroundCheck())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpforce);
+        if (Input.GetButtonDown("Jump") )
 
+        {
+            if (GroundCheck() || doublejump && potioncolision )
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpforce);
+                doublejump = !doublejump;
+            }
         }
         uppdateAnimationupdate();
         
     }
+    
   
     private void uppdateAnimationupdate()
     {
