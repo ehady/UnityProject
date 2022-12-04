@@ -15,7 +15,8 @@ public class PlayerMouvement : MonoBehaviour
     [SerializeField] private float movespeed = 7f;
     [SerializeField] private float jumpforce = 14f;
     private bool doublejump;
-    private bool potioncolision;
+    private bool greenpotioncolision;
+    private bool redpotioncolision;
 
     void Start()
     {
@@ -29,14 +30,36 @@ public class PlayerMouvement : MonoBehaviour
         if (collision.gameObject.CompareTag("potiongreen"))
         {
             Destroy(collision.gameObject);
-            potioncolision = true;
+            greenpotioncolision = true;
+
+        }
+        if (collision.gameObject.CompareTag("potion"))
+        {
+            Destroy(collision.gameObject);
+            redpotioncolision = true;
 
         }
     }
+    
+
 
     private void Update()
     {
-        if( GroundCheck() && !Input.GetButton("Jump"))
+        if (Input.GetKeyDown(KeyCode.E) && redpotioncolision)
+        {
+
+            transform.position = new Vector2(transform.position.x + 5f, transform.position.y);
+
+
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && redpotioncolision)
+        {
+
+            transform.position = new Vector2(transform.position.x - 5f, transform.position.y);
+
+
+        }
+        if ( GroundCheck() && !Input.GetButton("Jump"))
         {
             doublejump = false;
         }
@@ -45,7 +68,7 @@ public class PlayerMouvement : MonoBehaviour
         if (Input.GetButtonDown("Jump") )
 
         {
-            if (GroundCheck() || doublejump && potioncolision )
+            if (GroundCheck() || doublejump && greenpotioncolision )
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpforce);
                 doublejump = !doublejump;
