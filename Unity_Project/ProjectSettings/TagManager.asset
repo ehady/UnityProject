@@ -10,6 +10,9 @@ TagManager:
   - fire
   - potiongreen
   - Note
+  - box
+  - grabbable
+  - lever
   layers:
   - Default
   - TransparentFX
