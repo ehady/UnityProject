@@ -10,9 +10,15 @@ TagManager:
   - fire
   - potiongreen
   - Note
+<<<<<<< Updated upstream
   - box
   - grabbable
   - lever
+=======
+  - Note1
+  - Note2
+  - Note3
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
