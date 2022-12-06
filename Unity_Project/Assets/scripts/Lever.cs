@@ -5,8 +5,7 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     Animator myAnimator;
-    private bool keydown;   
-    const string Moving = "LeverMove";
+    
     private bool hasPlayer;
     // Start is called before the first frame update
     void Start()
@@ -21,29 +20,23 @@ public class Lever : MonoBehaviour
         //I tried using EnterCollision and ExitCollision but it didn'T work
         
         
-            if(hasPlayer && Input.GetKeyDown(KeyCode.E))
+        if(hasPlayer && Input.GetKeyDown(KeyCode.E)) 
         {
-            myAnimator.SetTrigger(Moving);
-
+            myAnimator.SetTrigger("Move");
         }
-
 
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            hasPlayer= true;
-        }
+        hasPlayer = true;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
+        
             hasPlayer= false;
-        }
+        
 
 
     }

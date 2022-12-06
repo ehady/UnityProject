@@ -4,26 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - potion
-  - Key
-  - ladder
   - fire
-  - potiongreen
-  - Note
-<<<<<<< Updated upstream
+  - ladder
+  - lever
   - box
   - grabbable
-  - lever
-=======
-  - Note1
-  - Note2
-  - Note3
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - jumpableground
+  - 
   - Water
   - UI
   - 
@@ -54,7 +44,7 @@ TagManager:
   - 
   m_SortingLayers:
   - name: background
-    uniqueID: 1249988337
+    uniqueID: 3241466453
     locked: 0
   - name: Default
     uniqueID: 0
