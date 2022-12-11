@@ -1410,8 +1410,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879397644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 1.88, z: 0}
-  m_LocalScale: {x: 1.1102216, y: 1.0787251, z: 1}
+  m_LocalPosition: {x: -0.0192, y: 1.7048, z: 0}
+  m_LocalScale: {x: 1.1291751, y: 1.0962397, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5816,7 +5816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 20147684861346947, guid: 8543e1f4f60299d4c86e49a6a00b2e47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.124824
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 20147684861346947, guid: 8543e1f4f60299d4c86e49a6a00b2e47, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5852,12 +5852,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 20147684861346949, guid: 8543e1f4f60299d4c86e49a6a00b2e47, type: 3}
       propertyPath: m_Name
-      value: PF Village Props - Platform M
+      value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 20147684861346949, guid: 8543e1f4f60299d4c86e49a6a00b2e47, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8543e1f4f60299d4c86e49a6a00b2e47, type: 3}
+--- !u!1 &6213109888968214921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 20147684861346949, guid: 8543e1f4f60299d4c86e49a6a00b2e47, type: 3}
+  m_PrefabInstance: {fileID: 6213109888968214920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6232685775903771915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 20147684861346947, guid: 8543e1f4f60299d4c86e49a6a00b2e47, type: 3}
   m_PrefabInstance: {fileID: 6213109888968214920}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6232685775903771916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213109888968214921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308be9dcf09590249bc02e6aa6bb7f64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDown: 0
+  isUp: 0
+  moveDown: 0
+  moveUp: 0
+--- !u!95 &6232685775903771917
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213109888968214921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a37bb8e9b04b4c42903ac032c9abcc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

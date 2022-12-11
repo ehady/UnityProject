@@ -9,6 +9,7 @@ TagManager:
   - lever
   - box
   - grabbable
+  - Platform
   layers:
   - Default
   - TransparentFX

@@ -5,12 +5,14 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     Animator myAnimator;
-    
+    GameObject platform;    
     private bool hasPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         myAnimator= GetComponent<Animator>();
+        platform = GameObject.Find("Platform");
         
     }
     
@@ -18,11 +20,30 @@ public class Lever : MonoBehaviour
     {
         //All the levers in the level is moving with this script
         //I tried using EnterCollision and ExitCollision but it didn'T work
-        
-        
-        if(hasPlayer && Input.GetKeyDown(KeyCode.E)) 
+
+
+        if (hasPlayer && Input.GetKeyDown(KeyCode.E))
         {
             myAnimator.SetTrigger("Move");
+            if (platform.GetComponent<Lift>().isUp)
+            {
+                platform.GetComponent<Lift>().MoveDown(true);
+
+            }
+            else
+            {
+                platform.GetComponent<Lift>().MoveDown(false);
+            }
+            if (platform.GetComponent<Lift>().isDown)
+            {
+                platform.GetComponent<Lift>().MoveUp(true);
+            }
+            else
+            {
+                platform.GetComponent<Lift>().MoveUp(false);
+            }
+
+
         }
 
 
@@ -35,15 +56,10 @@ public class Lever : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         
-            hasPlayer= false;
-        
+            hasPlayer= false;     
 
 
     }
-
-
-
-
     // Update is called once per frame
 
 
