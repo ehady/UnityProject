@@ -10,12 +10,12 @@ public class potioncollisiontext : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("potiongreen"))
         {
-            keytext.text = "POTION : Double Jump  " ;
+            keytext.text = "Potion: Double Jump" ;
 
         }
         else if (collision.gameObject.CompareTag("potion"))
         {
-            keytext.text = "POTION :    Teleport   ";
+            keytext.text = "Potion: Teleport";
         }
     }
 
