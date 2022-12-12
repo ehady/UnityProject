@@ -6,7 +6,7 @@ using UnityEngine;
 public class Lift : MonoBehaviour
 {
     bool movable;
-    public bool isDown;
+    public bool isDown; 
     public bool isUp;
     public bool moveDown;
     public bool moveUp;
@@ -18,7 +18,7 @@ public class Lift : MonoBehaviour
     {
         m_animator = GetComponent<Animator>();
         isUp = true;
-        isDown = false;
+        /*isDown = false;*/
         moveDown = false;
         moveUp = false;
     }
@@ -30,16 +30,17 @@ public class Lift : MonoBehaviour
         {
             m_animator.SetTrigger("Down");
             isUp = false;
-            isDown = true;
+            //isDown = true;
         }
         if (moveUp)
         {
             m_animator.SetTrigger("Up");
+            m_animator.SetTrigger("Default");
             isUp = true;
-            isDown = false;
-
+            //isDown = false;
         }
-       
+        moveDown = false;
+        moveUp = false;
 
     }
 

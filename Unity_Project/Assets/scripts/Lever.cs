@@ -32,16 +32,17 @@ public class Lever : MonoBehaviour
             }
             else
             {
-                platform.GetComponent<Lift>().MoveDown(false);
+                platform.GetComponent<Lift>().MoveUp(true);
             }
-            if (platform.GetComponent<Lift>().isDown)
+
+            /*if (platform.GetComponent<Lift>().isDown)
             {
                 platform.GetComponent<Lift>().MoveUp(true);
             }
             else
             {
                 platform.GetComponent<Lift>().MoveUp(false);
-            }
+            }*/
 
 
         }
