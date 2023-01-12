@@ -10,6 +10,7 @@ TagManager:
   - box
   - grabbable
   - Platform
+  - Pickable
   layers:
   - Default
   - TransparentFX
