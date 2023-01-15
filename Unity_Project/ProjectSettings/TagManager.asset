@@ -11,11 +11,14 @@ TagManager:
   - grabbable
   - Platform
   - Pickable
+  - potion
+  - potiongreen
+  - Key
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - backgroud
   - Water
   - UI
   - 
