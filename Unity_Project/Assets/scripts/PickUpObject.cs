@@ -7,18 +7,18 @@ public class PickUpObject : MonoBehaviour
     public GameObject objectToPickup;
     public Transform holdPosition;
     public ThrowHeldObject throwHeldObject;
-    public float threshold = 100.5f;
+    public float threshold = 10.5f;
     private bool holdingObject = false;
 
     void Update()
     {
         //if (Vector3.Distance(transform.position, objectToPickup.transform.position) < threshold)
         
-            if (Input.GetKeyDown(KeyCode.E) && !holdingObject)
+            if (Input.GetKeyDown(KeyCode.F) && !holdingObject)
             {
                 Pickup();
             }
-            else if (Input.GetKeyDown(KeyCode.E) && holdingObject)
+            else if (Input.GetKeyDown(KeyCode.F) && holdingObject)
             {
                 Release();
             }
