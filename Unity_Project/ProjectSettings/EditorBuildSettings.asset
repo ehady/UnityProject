@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2fcc810c2a19045459f476fd2e086657
+  - enabled: 1
+    path: Assets/Scenes/Level 1 (new).unity
+    guid: 771835e236d514e46a224729c9d75128
+  - enabled: 1
+    path: Assets/Scenes/Potion lvl.unity
+    guid: df87f2c02cc9eed4b948bbf662a20b22
   m_configObjects: {}
